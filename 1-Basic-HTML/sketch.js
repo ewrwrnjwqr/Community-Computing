@@ -1,7 +1,9 @@
-function setup() {
-  // put setup code here
-}
+function setup() {}
+function draw() {}
 
-function draw() {
-  // put drawing code here
-}
+$(function() {
+  $('a.link').click(function() {
+      $('a.link').removeClass('active');
+      $(this).addClass('active');
+  });
+});

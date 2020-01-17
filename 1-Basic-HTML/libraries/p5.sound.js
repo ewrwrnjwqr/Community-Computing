@@ -1451,7 +1451,6 @@ helpers = function () {
     var view = new window.DataView(buffer);
     // write the WAV container,
     // check spec at: https://web.archive.org/web/20171215131933/http://tiny.systems/software/soundProgrammer/WavFormatDocs.pdf
-    // RIFF chunk descriptor
     writeUTFBytes(view, 0, 'RIFF');
     view.setUint32(4, 36 + interleaved.length * 2, true);
     writeUTFBytes(view, 8, 'WAVE');
@@ -1906,8 +1905,6 @@ soundfile = function () {
       reader.readAsArrayBuffer(this.file);
     }
   };
-  // TO DO: use this method to create a loading bar that shows progress during file upload/decode.
-  p5.SoundFile.prototype._updateProgress = function (evt) {
     if (evt.lengthComputable) {
       var percentComplete = evt.loaded / evt.total * 0.99;
       this._whileLoading(percentComplete, evt);

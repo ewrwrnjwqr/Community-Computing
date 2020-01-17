@@ -37,6 +37,14 @@ ul{
     margin-bottom:10px;
 }
 
+.light{
+    padding:15px;
+    background-color:white;
+    color:black;
+    margin:auto;
+    float:right;
+}
+
 #showcase{
     min-height:1000px;
     background:url("../img/sunset.png") no-repeat 60px 0;
@@ -85,7 +93,7 @@ header{
     border-bottom:#dd7a4e 3px solid;
 }
 
-header .highlight .current a{
+header .current a{ /* Setup Current Color*/
     color:#e04949;
     font-weight:bold;
 }
@@ -118,9 +126,6 @@ header nav {
     float:right;
     margin-top:10px;    
 }
-
-a, a:visited {color:#140707};
-a.link.active {color:#e04949}; 
 
 li #swipe-link{
     margin-bottom:10px;
@@ -158,9 +163,16 @@ li #swipe-link{
 }
 
 #boxes .box img{
-    width:400;
+    width:400px;
     height:300px;
     padding:20px;
+}
+
+#who_main .headshot img{
+    width:200px;
+    height:200px;
+    padding:15px;
+    float:right;
 }
 
 aside #sidebar{
@@ -172,6 +184,10 @@ aside #sidebar{
 article #main-col{
     width:65%;
     float:left;
+}
+
+main #headshot{ /* How to Align*/
+    float: left;
 }
 
 footer{
@@ -196,9 +212,10 @@ footer{
         width:100%;
     } 
     header{
-        padding-bottom: 30px;
+        padding-bottom: 30px; 
     }
     #showcase h1{
+        line-height:normal;
         margin-top:40px; /* fit text collapse  issue */
     }
     #showcase p{

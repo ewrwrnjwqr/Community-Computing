@@ -7,3 +7,5 @@ $(function() {
       $(this).addClass('active');
   });
 });
+
+//ask why this doesnt work

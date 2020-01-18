@@ -163,15 +163,21 @@ li #swipe-link{
 }
 
 #boxes .box img{
-    width:400px;
     height:300px;
-    padding:20px;
+    width:auto;
 }
 
 #who_main .headshot img{
     width:200px;
     height:200px;
-    padding:15px;
+    padding:20px;
+    float:right;
+}
+
+#what_main .process img{
+    width:500px;
+    height:auto;
+    padding:20px;
     float:right;
 }
 

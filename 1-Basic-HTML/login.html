@@ -33,37 +33,43 @@
   </body>
   <section id="showcase">
     <div class="container">
-      <h1>Coding Suggestions Box.<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      </h1>
-    </div>
-  </section>
-  <section id="newsletter">
-    <div class="container">
-      <h1>Sign Up for Progress Updates!</h1>
-      <form>
-        <input type="email" placeholder="Enter email...">
-        <button type="submit" class="button_1">Join Now!</button>
-      </form>
-    </div>
-  </section>
-  <section id="boxes">
-    <div class="container">
-          <div class="box">
-            <img src="./img/coffee.png">
-            <h3>Passionate.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </div> <!-- basic photo block--> 
-          <div class="box">
-            <img src="./img/watches.png">
-            <h3>Aware.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </div> <!-- basic photo block--> 
-          <div class="box">
-            <img src="./img/shoes.png">
-            <h3>Hardworking.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </div> <!-- basic photo block--> 
-      </div>
+        <h1>Login</h1>
+        <button (click)="signInWithGoogle()" class="button btn-social btn-google"
+                *ngIf="!auth.currentUser">
+                 <i class="fa fa-google-plus fa-lg"></i> Connect Google
+        </button>
+        
+        <button  type="button" class="button"
+                 *ngIf="auth.currentUser"
+                 (click)="logout()">
+                  Logout
+        </button>
+        
+        <div *ngIf="auth.currentUser && !auth.hasUsername">
+        
+          <h3>Choose a Username</h3>
+        
+          <input type="text" class="input" placeholder="choose a username"
+                 [(ngModel)]="usernameText"
+                 (keyup)="checkUsername()">
+        
+          <p class="help is-success" *ngIf="usernameAvailable && usernameText">
+            @{{usernameText}} is available
+          </p>
+        
+          <p class="help is-danger" *ngIf="!usernameAvailable && usernameText">
+            @{{usernameText}} has already been taken
+          </p>
+        
+          <button class="button is-primary"
+                  [disabled]="!usernameAvailable || !usernameText"
+                  (click)="updateUsername()">
+        
+                  Select Username
+        
+          </button>
+        
+        </div>
     </div>
   </section>
 

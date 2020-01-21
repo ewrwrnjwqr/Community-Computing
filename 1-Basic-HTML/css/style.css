@@ -1,3 +1,8 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font:20px/30.5px 'Work Sans', sans-serif;
     padding:0;
@@ -85,6 +90,7 @@ ul{
     height:20px;
     width:175px
 }
+
 header{
     background:#dedede;
     color:#e04949;
@@ -217,22 +223,28 @@ footer{
         text-align:center;
         width:100%;
     } 
+
     header{
         padding-bottom: 30px; 
     }
+
     #showcase h1{
         line-height:normal;
         margin-top:40px; /* fit text collapse  issue */
     }
+
     #showcase p{
         margin-top:40px;
     }
+
     #newsletter button{
         display:block;
         width:100%;
     }
+
     #newsletter form input[type="email"]{
         width:100%;
         margin-bottom:5px;
     }
+
 }

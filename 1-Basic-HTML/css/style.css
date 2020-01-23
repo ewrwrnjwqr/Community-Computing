@@ -34,12 +34,14 @@ ul{
 }
 
 .dropBtn {
+    float: right;
     background-color: #dd7a4e;
     color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    padding:15px;
+    font-size:16px;
+    border-radius:50%;
+    border:none;
+    cursor: ointer;
   }
 
   .dropBtn:hover, .dropBtn:focus {
@@ -68,6 +70,7 @@ ul{
   }
 
   .dropContent a:hover {background-color: #ddd}
+
   .show {display:block;}
 
 .dark{

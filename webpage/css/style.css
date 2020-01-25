@@ -34,6 +34,7 @@ ul{
 }
 
 .dropBtn {
+    background:url("../img/icon.png") no-repeat;
     background-color: #dd7a4e;
     color: black;
     padding:15px;
@@ -251,6 +252,7 @@ footer{
     #newsletter h1,
     #newsletter form,
     #boxes .box,
+
     article #main-col,
     aside #sidebar{
         float:none;

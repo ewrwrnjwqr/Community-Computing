@@ -34,14 +34,13 @@ ul{
 }
 
 .dropBtn {
-    background:url("../img/icon.png") no-repeat;
-    background-color: #dd7a4e;
-    color: black;
-    padding:15px;
+    height:100px;
+    width:100px;
+    background-image:url("../img/icon.png");
+    background-repeat:no-repeat;
     font-size:16px;
-    border-radius:50%;
     border:none;
-    cursor: ointer;
+    cursor:pointer;
   }
 
   .dropBtn:hover, .dropBtn:focus {

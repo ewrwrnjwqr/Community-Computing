@@ -3,8 +3,6 @@
 class Data {
 
 /**
- * Returns a sanatized email;
- *
  * @param string $data
  * @return string
  */
@@ -14,8 +12,6 @@ public static function clean_email($data) {
 }
 
 /**
- * Strip all characters but letters, numbers, and whitespace;
- *
  * @param string $data
  * @return string
  */

@@ -1,25 +1,9 @@
 <?php
 
 /**
- * Firebase Realtime Database Using PHP Curl.
- * Collect your Blog/website readers name and email on Firebase Realtime database.
- *
  * @package Firebase Email Subscription
- * @author Santhosh veer
- * @license GPL-2.0+
- * @link https://www.allwebtuts.com
- * @copyright 2016-2018 allwebtuts.com, All rights reserved.
- *
- *            @Firebase Email Subscription
- *            Plugin Name: Firebase Email Subscription
- *            Plugin URI: https://www.allwebtuts.com/
- *            Description: Build your Email List - Collect your Blog Visitor's Email on Firebase realtime Database
- *            Version: 1.1
- *            License: GPL-3.0+
- *            License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-// data sanitization
 require_once dirname(__FILE__) . '/data.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -40,8 +24,7 @@ $email = Data::clean_email($email);
         
 }';
 
-//replace https://example-project.firebaseio.com with Firebase Realtime DB URL - DON'T REMOVE /subscribers.json
-$url = "https://example-project.firebaseio.com/subscribers.json";
+$url = "https://computing-site.firebaseio.com//subscribers.json";
 
     // cURL
     $ch = curl_init();
@@ -197,16 +180,7 @@ pre:before {
 }
 </style>
 
-
-<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
 
 
 </head>

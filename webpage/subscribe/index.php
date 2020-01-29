@@ -15,16 +15,13 @@ $email= $_POST["email"];
 $name = Data::clean_name($name);
 $email = Data::clean_email($email);
 
-//$name = htmlspecialchars($name,ENT_COMPAT);
-//$email = htmlspecialchars($email,ENT_COMPAT);
-
  $data = '{
   "subscriber": {
     "name": "' . $name . '","email": "' . $email . '"}
         
 }';
 
-$url = "https://computing-site.firebaseio.com//subscribers.json";
+$url = "https://computing-site.firebaseio.com//subscribe.json";
 
     // cURL
     $ch = curl_init();
@@ -41,10 +38,6 @@ $url = "https://computing-site.firebaseio.com//subscribers.json";
         echo 'Curl error: ' . curl_error($ch);
     }
     curl_close($ch);
-
-// Show result on JSON Format - if you don't want this just add // infront of the echo
-//echo $response . "\n";
-//echo $data . "\n";
 
 }
 
@@ -63,7 +56,6 @@ $message= '<div class="container"><div class="row"><div class="col-lg-6 col-lg-o
 <title>Subscribe to our Updates</title>
 <meta name="Description" content="Subscribe to our Blog Post Updates.">
 
-<!-- CSS and Fonts -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">

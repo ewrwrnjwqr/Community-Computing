@@ -21,6 +21,7 @@ $email = Data::clean_email($email);
         
 }';
 
+// replace now with url of new proj
 $url = "https://computing-site.firebaseio.com//subscribe.json";
 
     // cURL

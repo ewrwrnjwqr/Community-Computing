@@ -118,12 +118,12 @@ ul {
     float:left;
 }
 
-#newsletter form {
+#newsletter form{
     float:right;
     margin-top:15px;
 }
 
-#newsletter input[type="email"] {
+#newsletter input[type="email"]{
     padding:5px;
     height:20px;
     width:175px

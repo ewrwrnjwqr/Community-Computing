@@ -37,8 +37,6 @@ ul {
     /* fix button alingment and do on hover rather on click*/
     height:37px;
     width:37px;
-    background-image:url("../img/icon.png");
-    background-repeat:no-repeat;
     font-size:16px;
     border:none;
     cursor:pointer;
